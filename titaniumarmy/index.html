@@ -16,7 +16,7 @@
         content="IE=edge">
 
   <title>
-    Titanium Army | Extreme Science & Futuristic Experiments
+    Titanium Army | Extreme Science &amp; Futuristic Experiments
   </title>
 
   <meta name="description"
@@ -29,11 +29,25 @@
         content="#05070b">
 
   <!-- ========================= -->
+  <!-- FIX: CANONICAL URL ADDED -->
+  <!-- ========================= -->
+
+  <link rel="canonical"
+        href="https://titaniumarmy.attrim27.workers.dev/">
+
+  <!-- ========================= -->
+  <!-- FIX: FAVICON ADDED -->
+  <!-- ========================= -->
+
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- ========================= -->
   <!-- OPEN GRAPH -->
   <!-- ========================= -->
 
   <meta property="og:title"
-        content="Titanium Army - Extreme Science & Innovation">
+        content="Titanium Army - Extreme Science &amp; Innovation">
 
   <meta property="og:description"
         content="Extreme science experiments, futuristic gadgets, and survival challenges.">
@@ -97,9 +111,9 @@
 
     <div class="container nav-container">
 
-      <!-- LOGO / BRAND -->
+      <!-- FIX: BRAND NOW LINKS TO #HOME, NOT BROKEN IMAGE URL -->
 
-      <a href="https://yt3.googleusercontent.com/6gqbAWV3L-Uy1zRFov8lJEa7ct9nXFqSb3FKSW0If3hhWL76blt2sQXWMlLUFaaei2aApkl2MQ=s900-c-k-c0x00ffffff-no-rj"
+      <a href="#home"
          class="brand">
 
         TITANIUM ARMY
@@ -122,9 +136,11 @@
 
       </nav>
 
-      <!-- CTA BUTTON -->
+      <!-- FIX: JOIN ARMY BUTTON NOW LINKS TO YOUTUBE -->
 
-      <a href="#join"
+      <a href="https://www.youtube.com/@MrIndianHacker"
+         target="_blank"
+         rel="noopener noreferrer"
          class="btn primary nav-cta">
 
         Join Army
@@ -203,7 +219,7 @@
       </h1>
 
       <p class="subtitle">
-        Dangerous experiments. Futuristic inventions. 
+        Dangerous experiments. Futuristic inventions.
         Survival challenges. Extreme technology.
       </p>
 
@@ -237,7 +253,11 @@
           Watch Experiments
         </a>
 
-        <a href="#join"
+        <!-- FIX: JOIN BUTTON NOW LINKS TO YOUTUBE -->
+
+        <a href="https://www.youtube.com/@MrIndianHacker"
+           target="_blank"
+           rel="noopener noreferrer"
            class="btn secondary">
           Join Titanium Army
         </a>
@@ -284,10 +304,12 @@
 
       </div>
 
+      <!-- FIX: DATA-TARGET WAS 10,344,421,112 (BROKEN) — NOW FIXED TO 10 -->
+
       <div class="stat-card">
 
         <h2 class="counter"
-            data-target="10344421112 ">
+            data-target="10">
           0
         </h2>
 
@@ -404,7 +426,7 @@
           <h3>Titanium Drone</h3>
 
           <p>
-            High-speed futuristic drone engineered 
+            High-speed futuristic drone engineered
             for extreme tests and dangerous missions.
           </p>
 
@@ -419,7 +441,7 @@
           <h3>Rocket Bike</h3>
 
           <p>
-            Rocket-powered experimental speed machine 
+            Rocket-powered experimental speed machine
             breaking physics boundaries.
           </p>
 
@@ -434,7 +456,7 @@
           <h3>Survival Capsule</h3>
 
           <p>
-            Portable futuristic bunker engineered 
+            Portable futuristic bunker engineered
             for dangerous environments.
           </p>
 
@@ -461,13 +483,15 @@
 
       <div class="team-grid">
 
-        <!-- TEAM MEMBER 1 -->
+        <!-- TEAM MEMBER 1 — MR INDIAN HACKER -->
 
         <div class="team-card reveal">
 
           <div class="team-image">
 
-            <img src="https://tse4.mm.bing.net/th/id/OIP.s0dwRHaxyzMxqbOX1hu8ZwHaHZ?cb=thfvnextfalcon&rs=1&pid=ImgDetMain&o=7&rm=300x300"
+            <!-- FIX: USING OFFICIAL YOUTUBE CHANNEL AVATAR (MORE RELIABLE) -->
+
+            <img src="https://yt3.googleusercontent.com/6gqbAWV3L-Uy1zRFov8lJEa7ct9nXFqSb3FKSW0If3hhWL76blt2sQXWMlLUFaaei2aApkl2MQ=s900-c-k-c0x00ffffff-no-rj"
                  alt="Mr Indian Hacker"
                  loading="lazy">
 
@@ -475,25 +499,38 @@
 
           <h3>Mr Indian Hacker</h3>
 
-          <p>Creator � Innovator � Experimenter</p>
+          <!-- FIX: GARBLED CHARACTERS REPLACED WITH PROPER BULLETS -->
+
+          <p>Creator &bull; Innovator &bull; Experimenter</p>
 
         </div>
 
         <!-- TEAM MEMBER 2 -->
+        <!--
+          ACTION REQUIRED:
+          1. Open this link: https://www.instagram.com/p/DQHI-X8E1jm/
+          2. Download / save the image
+          3. Upload it to your Cloudflare Worker as: assets/team.jpg
+          The code below will load it automatically once uploaded.
+          Until then, a placeholder will show.
+        -->
 
         <div class="team-card reveal">
 
           <div class="team-image">
 
-            <img src="C:\Users\hp\Downloads\Screenshot_24-5-2026_132125_www.youtube.com.jpeg"
-                 alt="Titanium Ops"
-                 loading="lazy">
+            <img src="assets/team.jpg"
+                 alt="Titanium Team Members"
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='https://placehold.co/300x300/10151d/ff6b00?text=Team';">
 
           </div>
 
-          <h3>Others</h3>
+          <h3>The Team</h3>
 
-          <p>Team members  �  Associates</p>
+          <!-- FIX: GARBLED CHARACTERS REPLACED WITH PROPER BULLETS -->
+
+          <p>Team Members &bull; Associates</p>
 
         </div>
 
@@ -517,9 +554,11 @@
       <h2>JOIN THE TITANIUM ARMY</h2>
 
       <p>
-        Become part of the most fearless science 
+        Become part of the most fearless science
         community on the internet.
       </p>
+
+      <!-- FIX: FORM NOW REDIRECTS TO YOUTUBE ON SUBMIT (HANDLED IN SCRIPT.JS) -->
 
       <form class="join-form"
             id="newsletterForm">
@@ -553,31 +592,36 @@
         TITANIUM ARMY
       </div>
 
+      <!-- FIX: GARBLED CHARACTERS REPLACED -->
+
       <p>
-        Extreme Science � Futuristic Technology � Survival Challenges
+        Extreme Science &bull; Futuristic Technology &bull; Survival Challenges
       </p>
 
       <div class="socials">
 
-        <a href="#"
+        <!-- FIX: REAL SOCIAL LINKS ADDED (NO FACEBOOK AS REQUESTED) -->
+
+        <a href="https://www.youtube.com/@MrIndianHacker"
+           target="_blank"
+           rel="noopener noreferrer"
            aria-label="YouTube">
           YouTube
         </a>
 
-        <a href="#"
+        <a href="https://www.instagram.com/mrindianhacer/"
+           target="_blank"
+           rel="noopener noreferrer"
            aria-label="Instagram">
           Instagram
         </a>
 
-        <a href="#"
-           aria-label="Facebook">
-          Facebook
-        </a>
-
       </div>
 
+      <!-- FIX: COPYRIGHT SYMBOL WAS GARBLED -->
+
       <small>
-        � 2026 Titanium Army. All Rights Reserved.
+        &copy; 2026 Titanium Army. All Rights Reserved.
       </small>
 
     </div>
