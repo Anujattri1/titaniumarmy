@@ -1,5 +1,5 @@
 // =========================================================
-// TITANIUM ARMY � FINAL GOD LEVEL ENGINE
+// TITANIUM ARMY — FINAL GOD LEVEL ENGINE
 // ULTRA SMOOTH + ZERO LAG + MOBILE SAFE
 // CINEMATIC AAA PERFORMANCE SCRIPT
 // =========================================================
@@ -265,7 +265,12 @@
   }
 
   // =====================================================
-  // COUNTER ANIMATION
+  // FIX: COUNTER ANIMATION
+  // The views counter data-target was 10,344,421,112
+  // which caused the display to show raw billions instead
+  // of a clean "10" for "Billion Views".
+  // Now fixed in HTML (data-target="10") and counter
+  // logic also cleaned up below for reliability.
   // =====================================================
 
   const counters = document.querySelectorAll(".counter");
@@ -282,11 +287,18 @@
 
           const counter = entry.target;
 
-          const target = parseInt(counter.dataset.target) || 0;
+          const target =
+            parseInt(counter.dataset.target, 10) || 0;
 
           let current = 0;
 
-          const increment = Math.max(1, target / 90);
+          const duration = 1500; // ms
+
+          const frameRate = 60;
+
+          const totalFrames = (duration / 1000) * frameRate;
+
+          const increment = Math.max(1, target / totalFrames);
 
           const update = () => {
 
@@ -294,7 +306,8 @@
 
             if (current < target) {
 
-              counter.textContent = Math.floor(current).toLocaleString();
+              counter.textContent =
+                Math.floor(current).toLocaleString();
 
               requestAnimationFrame(update);
 
@@ -480,7 +493,8 @@
 
       const updateParallax = rafThrottle(() => {
 
-        heroContent.style.transform = `translate3d(0, ${ window.scrollY * 0.08 }px, 0)`;
+        heroContent.style.transform =
+          `translate3d(0, ${ window.scrollY * 0.08 }px, 0)`;
 
       });
 
@@ -518,13 +532,15 @@
 
         const rotateX = ((y / rect.height) - 0.5) * -7;
 
-        card.style.transform = `perspective(1000px) rotateX(${ rotateX }deg) rotateY(${ rotateY }deg) translate3d(0,-6px,0)`;
+        card.style.transform =
+          `perspective(1000px) rotateX(${ rotateX }deg) rotateY(${ rotateY }deg) translate3d(0,-6px,0)`;
 
       }));
 
       card.addEventListener("mouseleave", () => {
 
-        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translate3d(0,0,0)`;
+        card.style.transform =
+          `perspective(1000px) rotateX(0deg) rotateY(0deg) translate3d(0,0,0)`;
 
       });
 
@@ -536,8 +552,12 @@
   // CUSTOM CURSOR
   // =====================================================
 
-  // Always enable custom cursor on desktop (not mobile)
-  const isDesktop = !isMobile && (window.matchMedia("(pointer:fine)").matches || window.matchMedia("(hover:hover)").matches);
+  const isDesktop =
+    !isMobile &&
+    (
+      window.matchMedia("(pointer:fine)").matches ||
+      window.matchMedia("(hover:hover)").matches
+    );
 
   if (isDesktop) {
 
@@ -553,15 +573,14 @@
 
     body.classList.add("cursor-enabled");
 
-    let isMouseDown = false;
-
     document.addEventListener(
 
       "mousemove",
 
       rafThrottle(e => {
 
-        cursor.style.transform = `translate3d(${ e.clientX }px, ${ e.clientY }px, 0)`;
+        cursor.style.transform =
+          `translate3d(${ e.clientX }px, ${ e.clientY }px, 0)`;
 
       }),
 
@@ -569,23 +588,18 @@
 
     );
 
-    // Add click animation
     document.addEventListener("mousedown", () => {
-      isMouseDown = true;
       cursor.classList.add("active");
     });
 
     document.addEventListener("mouseup", () => {
-      isMouseDown = false;
       cursor.classList.remove("active");
     });
 
-    // Hide cursor when leaving window
     document.addEventListener("mouseout", () => {
       cursor.style.opacity = "0";
     });
 
-    // Show cursor when entering window
     document.addEventListener("mouseover", () => {
       cursor.style.opacity = "1";
     });
@@ -606,7 +620,10 @@
 
     const scrollHeight = html.scrollHeight - window.innerHeight;
 
-    let progress = scrollHeight > 0 ? (window.scrollY / scrollHeight) * 100 : 0;
+    let progress =
+      scrollHeight > 0
+        ? (window.scrollY / scrollHeight) * 100
+        : 0;
 
     progress = Math.min(100, Math.max(0, progress));
 
@@ -619,7 +636,9 @@
   window.addEventListener("scroll", updateProgress, { passive: true });
 
   // =====================================================
-  // NEWSLETTER FORM
+  // FIX: NEWSLETTER FORM — NOW REDIRECTS TO YOUTUBE
+  // Previously showed broken emoji alert and did nothing.
+  // Now opens Mr Indian Hacker's YouTube channel on submit.
   // =====================================================
 
   const newsletterForm = document.querySelector("#newsletterForm");
@@ -634,9 +653,14 @@
 
       if (input && input.value.trim()) {
 
-        alert("?? Welcome To Titanium Army! Check your email!");
-
         newsletterForm.reset();
+
+        // Open YouTube channel in new tab
+        window.open(
+          "https://www.youtube.com/@MrIndianHacker",
+          "_blank",
+          "noopener,noreferrer"
+        );
 
       }
 
