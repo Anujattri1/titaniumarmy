@@ -1,0 +1,17 @@
+{
+  "name": "Titanium Army Fan Hub",
+  "short_name": "Titanium Army",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "description": "Fan-made extreme science and experiment video hub.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

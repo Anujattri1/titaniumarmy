@@ -1,591 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <!-- ========================= -->
-  <!-- BASIC SEO -->
-  <!-- ========================= -->
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <title>Titanium Army | Fan-Made Extreme Science Hub</title>
+  <meta name="description" content="A fan-made Titanium Army landing page celebrating extreme science experiments, futuristic builds, and survival challenges inspired by Mr Indian Hacker.">
+  <meta name="keywords" content="Titanium Army, Mr Indian Hacker fan site, science experiments, futuristic gadgets, survival challenges">
+  <meta name="theme-color" content="#05070b">
+  <link rel="canonical" href="https://titaniumarmy.attrim27.workers.dev/">
 
-  <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
+  <meta property="og:title" content="Titanium Army | Fan-Made Extreme Science Hub">
+  <meta property="og:description" content="Extreme science experiments, futuristic builds, and survival challenges in one fan-made hub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://titaniumarmy.attrim27.workers.dev/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:site_name" content="Titanium Army">
 
-  <title>
-    Titanium Army | Extreme Science & Futuristic Experiments
-  </title>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Titanium Army | Fan-Made Extreme Science Hub">
+  <meta name="twitter:description" content="A cinematic fan-made hub for extreme science and futuristic experiment videos.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80">
 
-  <meta name="description"
-        content="Titanium Army brings extreme science experiments, futuristic gadgets, dangerous survival challenges and insane inventions inspired by Mr Indian Hacker style.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
 
-  <meta name="keywords"
-        content="Titanium Army, Mr Indian Hacker, Science Experiments, Futuristic Gadgets, Survival Challenges">
-
-  <meta name="theme-color"
-        content="#05070b">
-
-  <!-- ========================= -->
-  <!-- OPEN GRAPH -->
-  <!-- ========================= -->
-
-  <meta property="og:title"
-        content="Titanium Army - Extreme Science & Innovation">
-
-  <meta property="og:description"
-        content="Extreme science experiments, futuristic gadgets, and survival challenges.">
-
-  <meta property="og:type"
-        content="website">
-
-  <meta property="og:image"
-        content="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200">
-
-  <!-- ========================= -->
-  <!-- FONTS -->
-  <!-- ========================= -->
-
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-  <!-- ========================= -->
-  <!-- CSS -->
-  <!-- ========================= -->
-
-  <link rel="stylesheet"
-        href="styles.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ========================= -->
-  <!-- PRELOADER -->
-  <!-- ========================= -->
-
-  <div class="preloader"
-       id="preloader">
-
+  <div class="preloader" id="preloader" aria-hidden="true">
     <div class="loader"></div>
-
     <h2>TITANIUM ARMY</h2>
-
   </div>
 
-  <!-- ========================= -->
-  <!-- PARTICLES CANVAS -->
-  <!-- ========================= -->
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-  <canvas id="particles"></canvas>
-
-  <!-- ========================= -->
-  <!-- HEADER / NAVBAR -->
-  <!-- ========================= -->
-
-  <header class="site-header"
-          id="navbar">
-
+  <header class="site-header" id="navbar">
     <div class="container nav-container">
+      <a href="#home" class="brand" aria-label="Titanium Army home">TITANIUM ARMY</a>
 
-      <!-- LOGO / BRAND -->
-
-      <a href="https://yt3.googleusercontent.com/6gqbAWV3L-Uy1zRFov8lJEa7ct9nXFqSb3FKSW0If3hhWL76blt2sQXWMlLUFaaei2aApkl2MQ=s900-c-k-c0x00ffffff-no-rj"
-         class="brand">
-
-        TITANIUM ARMY
-
-      </a>
-
-      <!-- DESKTOP NAVIGATION -->
-
-      <nav class="nav">
-
+      <nav class="nav" aria-label="Primary navigation">
         <a href="#home">Home</a>
-
         <a href="#experiments">Experiments</a>
-
         <a href="#gadgets">Gadgets</a>
-
-        <a href="#team">Team</a>
-
+        <a href="#about">About</a>
         <a href="#join">Join</a>
-
       </nav>
 
-      <!-- CTA BUTTON -->
+      <a href="https://www.youtube.com/@MrIndianHacker" target="_blank" rel="noopener noreferrer" class="btn primary nav-cta">Official Channel</a>
 
-      <a href="#join"
-         class="btn primary nav-cta">
-
-        Join Army
-
-      </a>
-
-      <!-- MOBILE MENU BUTTON -->
-
-      <button class="nav-toggle"
-              id="navToggle"
-              aria-label="Toggle Menu"
-              aria-expanded="false">
-
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-
       </button>
-
     </div>
-
   </header>
 
-  <!-- ========================= -->
-  <!-- MOBILE NAVIGATION -->
-  <!-- ========================= -->
-
-  <nav class="mobile-nav"
-       id="mobileNav">
-
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <a href="#home">Home</a>
     <a href="#experiments">Experiments</a>
     <a href="#gadgets">Gadgets</a>
-    <a href="#team">Team</a>
+    <a href="#about">About</a>
     <a href="#join">Join</a>
-
   </nav>
 
-  <!-- ========================= -->
-  <!-- HERO SECTION -->
-  <!-- ========================= -->
+  <main id="main">
+    <section class="hero" id="home">
+      <img class="hero-media" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1800&q=80" alt="" aria-hidden="true" fetchpriority="high">
+      <div class="hero-overlay"></div>
+      <div class="hero-gradient"></div>
 
-  <section class="hero"
-           id="home">
+      <div class="hero-content">
+        <span class="eyebrow">Unofficial fan-made science hub</span>
+        <h1 class="title"><span>Science</span> Goes Extreme</h1>
+        <p class="subtitle">Dangerous experiments, futuristic inventions, survival challenges, and extreme technology videos gathered into one cinematic fan page.</p>
+        <p class="fan-note">Fan-made tribute inspired by Mr Indian Hacker. This site is not affiliated with, sponsored by, or endorsed by the official channel.</p>
 
-    <!-- BACKGROUND VIDEO -->
-
-    <video autoplay
-           muted
-           loop
-           playsinline
-           class="hero-video"
-           poster="assets/hero.jpg">
-
-      <source src="assets/hero.mp4"
-              type="video/mp4">
-
-    </video>
-
-    <!-- OVERLAYS -->
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-gradient"></div>
-
-    <!-- HERO CONTENT -->
-
-    <div class="hero-content">
-
-      <span class="eyebrow">
-        MR INDIAN HACKER STYLE EXPERIENCE
-      </span>
-
-      <h1 class="title">
-        <span>SCIENCE</span> GOES EXTREME
-      </h1>
-
-      <p class="subtitle">
-        Dangerous experiments. Futuristic inventions. 
-        Survival challenges. Extreme technology.
-      </p>
-
-      <!-- HERO STATS -->
-
-      <div class="hero-stats">
-
-        <div class="stat-item">
-          <strong>51.7M+</strong>
-          <span>Subscribers</span>
+        <div class="hero-stats" aria-label="Fan page highlights">
+          <div class="stat-item">
+            <strong>51M+</strong>
+            <span>Fan community</span>
+          </div>
+          <div class="stat-item">
+            <strong>1K+</strong>
+            <span>Videos celebrated</span>
+          </div>
+          <div class="stat-item">
+            <strong>10B+</strong>
+            <span>Views celebrated</span>
+          </div>
         </div>
 
-        <div class="stat-item">
-          <strong>1.3k+</strong>
-          <span>Experiments</span>
+        <div class="hero-cta">
+          <a href="#experiments" class="btn primary">Watch Experiments</a>
+          <a href="https://www.youtube.com/@MrIndianHacker" target="_blank" rel="noopener noreferrer" class="btn secondary">Open Official Channel</a>
         </div>
+      </div>
 
-        <div class="stat-item">
-          <strong>10B+</strong>
-          <span>Views</span>
+      <a class="scroll-indicator" href="#experiments" aria-label="Scroll to experiments"><span></span></a>
+    </section>
+
+    <section class="stats-section reveal" aria-label="Quick stats">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <h2 class="counter" data-target="51" data-suffix="M+">0</h2>
+          <p>Fan community</p>
         </div>
-
+        <div class="stat-card">
+          <h2 class="counter" data-target="1" data-suffix="K+">0</h2>
+          <p>Videos celebrated</p>
+        </div>
+        <div class="stat-card">
+          <h2 class="counter" data-target="10" data-suffix="B+">0</h2>
+          <p>Views celebrated</p>
+        </div>
       </div>
+    </section>
 
-      <!-- HERO BUTTONS -->
+    <section class="section" id="experiments">
+      <div class="container">
+        <h2 class="section-title">Viral Experiments</h2>
 
-      <div class="hero-cta">
+        <div class="card-grid">
+          <article class="experiment-card reveal">
+            <a class="card-media-link" href="https://youtu.be/cO_FdTGJECY?si=A4zfZJhtlqEy-Ayb" target="_blank" rel="noopener noreferrer" aria-label="Watch explosive chemical reactions on YouTube">
+              <img src="https://i.ytimg.com/vi/cO_FdTGJECY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBxNv9MXeNEfYzHvQO_Nx6Tp62uzA" alt="Explosive chemical reaction video thumbnail" loading="lazy">
+            </a>
+            <div class="card-content">
+              <span>Extreme Science</span>
+              <h3>Explosive Chemical Reactions</h3>
+              <p>Fast-paced reactions and dramatic science moments made for curious fans.</p>
+              <a href="https://youtu.be/cO_FdTGJECY?si=A4zfZJhtlqEy-Ayb" target="_blank" rel="noopener noreferrer" class="text-link">Watch on YouTube</a>
+            </div>
+          </article>
 
-        <a href="#experiments"
-           class="btn primary">
-          Watch Experiments
-        </a>
+          <article class="experiment-card reveal">
+            <a class="card-media-link" href="https://youtu.be/XZgxswVPmoY?si=jIp1VGQsI1vRc8JR" target="_blank" rel="noopener noreferrer" aria-label="Watch extreme survival challenges on YouTube">
+              <img src="https://i.ytimg.com/vi/XZgxswVPmoY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAbw4uefym0vWwqjL1NdJB9iy13fw" alt="Extreme survival challenge video thumbnail" loading="lazy">
+            </a>
+            <div class="card-content">
+              <span>Survival</span>
+              <h3>Extreme Survival Challenges</h3>
+              <p>High-risk scenarios, endurance tests, and the thrill of pushing limits.</p>
+              <a href="https://youtu.be/XZgxswVPmoY?si=jIp1VGQsI1vRc8JR" target="_blank" rel="noopener noreferrer" class="text-link">Watch on YouTube</a>
+            </div>
+          </article>
 
-        <a href="#join"
-           class="btn secondary">
-          Join Titanium Army
-        </a>
-
+          <article class="experiment-card reveal">
+            <a class="card-media-link" href="https://youtu.be/CsafO_dFj0U?si=0vkv_nYGtLOuGqcv" target="_blank" rel="noopener noreferrer" aria-label="Watch CO2 rocket experiments on YouTube">
+              <img src="https://ts1.mm.bing.net/th?id=OIP.cP5s2o9aSP23JdgYvHvnIwHaEK&pid=15.1&o=7&rm=3" alt="CO2 rocket experiment thumbnail" loading="lazy">
+            </a>
+            <div class="card-content">
+              <span>Technology</span>
+              <h3>CO2 Rocket Experiments</h3>
+              <p>Rocket-powered science ideas and maker-style builds with big visual payoff.</p>
+              <a href="https://youtu.be/CsafO_dFj0U?si=0vkv_nYGtLOuGqcv" target="_blank" rel="noopener noreferrer" class="text-link">Watch on YouTube</a>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
+    <section class="section dark-section" id="gadgets">
+      <div class="container">
+        <h2 class="section-title">Insane Inventions</h2>
 
-    <!-- SCROLL INDICATOR -->
-
-    <div class="scroll-indicator">
-      <span></span>
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- STATS SECTION -->
-  <!-- ========================= -->
-
-  <section class="stats-section reveal">
-
-    <div class="container stats-grid">
-
-      <div class="stat-card">
-
-        <h2 class="counter"
-            data-target="51">
-          0
-        </h2>
-
-        <p>Million Subscribers</p>
-
-      </div>
-
-      <div class="stat-card">
-
-        <h2 class="counter"
-            data-target="13">
-          0
-        </h2>
-
-        <p>Thousand Experiments</p>
-
-      </div>
-
-      <div class="stat-card">
-
-        <h2 class="counter"
-            data-target="10">
-          0
-        </h2>
-
-        <p>Billion Views</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- EXPERIMENTS SECTION -->
-  <!-- ========================= -->
-
-  <section class="section"
-           id="experiments">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Viral Experiments
-      </h2>
-
-      <div class="card-grid">
-
-        <!-- EXPERIMENT CARD 1 -->
-
-        <article class="experiment-card reveal">
-          <a href="https://youtu.be/cO_FdTGJECY?si=A4zfZJhtlqEy-Ayb">
-            <img src="https://i.ytimg.com/vi/cO_FdTGJECY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBxNv9MXeNEfYzHvQO_Nx6Tp62uzA"
-                 alt="Explosive Chemical Reactions"
-                 loading="lazy">
-          </a>
-
-          <div class="card-content">
-
-            <span>Extreme Science</span>
-
-            <h3>Explosive Chemical Reactions</h3>
-
-            <p>Mind-blowing chemical reactions that push the limits of science.</p>
-
+        <div class="gadgets-grid">
+          <div class="gadget-box reveal">
+            <div class="gadget-number">01</div>
+            <h3>High-Speed Drones</h3>
+            <p>Fast-moving builds, creative engineering, and daring tests made for spectacle.</p>
           </div>
 
-        </article>
-
-        <!-- EXPERIMENT CARD 2 -->
-
-        <article class="experiment-card reveal">
-          <a href="https://youtu.be/XZgxswVPmoY?si=jIp1VGQsI1vRc8JR">
-            <img src="https://i.ytimg.com/vi/XZgxswVPmoY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAbw4uefym0vWwqjL1NdJB9iy13fw"
-                 alt="Extreme Survival Challenges"
-                 loading="lazy">
-          </a>
-
-          <div class="card-content">
-
-            <span>Survival</span>
-
-            <h3>Extreme Survival Challenges</h3>
-
-            <p>Test human limits with dangerous survival scenarios in extreme environments.</p>
-
+          <div class="gadget-box reveal">
+            <div class="gadget-number">02</div>
+            <h3>Rocket Builds</h3>
+            <p>Pressure, propulsion, and backyard engineering concepts shown with cinematic energy.</p>
           </div>
 
-        </article>
-
-        <!-- EXPERIMENT CARD 3 -->
-
-        <article class="experiment-card reveal">
-          <a href="https://youtu.be/CsafO_dFj0U?si=0vkv_nYGtLOuGqcv">
-            <img src="https://ts1.mm.bing.net/th?id=OIP.cP5s2o9aSP23JdgYvHvnIwHaEK&pid=15.1&o=7&rm=3"
-                 alt="CO2 Rockets Experiments"
-                 loading="lazy">
-          </a>
-
-          <div class="card-content">
-
-            <span>Technology</span>
-
-            <h3>CO2  Rockets  Experiments</h3>
-
-            <p>Next-generation inventions engineered from titanium and advanced materials.</p>
-
+          <div class="gadget-box reveal">
+            <div class="gadget-number">03</div>
+            <h3>Survival Concepts</h3>
+            <p>Challenge setups and science-inspired gear ideas for extreme environments.</p>
           </div>
-
-        </article>
-
+        </div>
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- GADGETS SECTION -->
-  <!-- ========================= -->
-
-  <section class="section dark-section"
-           id="gadgets">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Insane Inventions
-      </h2>
-
-      <div class="gadgets-grid">
-
-        <!-- GADGET 1 -->
-
-        <div class="gadget-box reveal">
-
-          <div class="gadget-number">01</div>
-
-          <h3>Titanium Drone</h3>
-
-          <p>
-            High-speed futuristic drone engineered 
-            for extreme tests and dangerous missions.
-          </p>
-
+    <section class="section" id="about">
+      <div class="container about-layout">
+        <div class="about-copy reveal">
+          <h2 class="section-title left">About This Page</h2>
+          <p>Titanium Army is presented here as a fan-made showcase for viewers who enjoy large-scale experiments, gadget builds, and survival challenge content.</p>
+          <p>The site links out to the official YouTube channel for the actual videos and avoids collecting user data or pretending to be an official brand property.</p>
         </div>
 
-        <!-- GADGET 2 -->
-
-        <div class="gadget-box reveal">
-
-          <div class="gadget-number">02</div>
-
-          <h3>Rocket Bike</h3>
-
-          <p>
-            Rocket-powered experimental speed machine 
-            breaking physics boundaries.
-          </p>
-
+        <div class="about-panel reveal">
+          <span>Trust note</span>
+          <h3>Clear fan-site labeling</h3>
+          <p>Visitors see the unofficial notice in the hero section, metadata, and footer so the page feels transparent instead of misleading.</p>
         </div>
-
-        <!-- GADGET 3 -->
-
-        <div class="gadget-box reveal">
-
-          <div class="gadget-number">03</div>
-
-          <h3>Survival Capsule</h3>
-
-          <p>
-            Portable futuristic bunker engineered 
-            for dangerous environments.
-          </p>
-
-        </div>
-
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- TEAM SECTION -->
-  <!-- ========================= -->
-
-  <section class="section"
-           id="team">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Titanium Team
-      </h2>
-
-      <div class="team-grid">
-
-        <!-- TEAM MEMBER 1 -->
-
-        <div class="team-card reveal">
-
-          <div class="team-image">
-
-            <img src="https://tse4.mm.bing.net/th/id/OIP.s0dwRHaxyzMxqbOX1hu8ZwHaHZ?cb=thfvnextfalcon&rs=1&pid=ImgDetMain&o=7&rm=300x300"
-                 alt="Mr Indian Hacker"
-                 loading="lazy">
-
-          </div>
-
-          <h3>Mr Indian Hacker</h3>
-
-          <p>Creator • Innovator • Experimenter</p>
-
+    <section class="join-section" id="join">
+      <div class="join-overlay"></div>
+      <div class="join-content">
+        <h2>Watch More Experiments</h2>
+        <p>Head to the official channel for the newest videos, experiments, and community updates.</p>
+        <div class="join-actions">
+          <a href="https://www.youtube.com/@MrIndianHacker" target="_blank" rel="noopener noreferrer" class="btn primary">Open YouTube Channel</a>
+          <a href="#experiments" class="btn secondary">Back to Experiments</a>
         </div>
-
-        <!-- TEAM MEMBER 2 -->
-
-        <div class="team-card reveal">
-
-          <div class="team-image">
-
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8RIQkzLpq-JdtcHdeMYlz7C_s-JuR3jrvEA&s"
-                 alt="Titanium Ops"
-                 loading="lazy">
-
-          </div>
-
-          <h3>Others</h3>
-
-          <p>Team members • Associates</p>
-
-        </div>
-
       </div>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- JOIN SECTION -->
-  <!-- ========================= -->
-
-  <section class="join-section"
-           id="join">
-
-    <div class="join-overlay"></div>
-
-    <div class="join-content">
-
-      <h2>JOIN THE TITANIUM ARMY</h2>
-
-      <p>
-        Become part of the most fearless science 
-        community on the internet.
-      </p>
-
-      <form class="join-form"
-            id="newsletterForm">
-
-        <a href="https://www.youtube.com/@MrIndianHacker"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn primary nav-cta">
-          Join Now
-        </a>
-
-      </form>
-
-    </div>
-
-  </section>
-
-  <!-- ========================= -->
-  <!-- FOOTER -->
-  <!-- ========================= -->
+    </section>
+  </main>
 
   <footer class="site-footer">
-
     <div class="footer-glow"></div>
-
     <div class="container footer-container">
-
-      <div class="footer-logo">
-        TITANIUM ARMY
-      </div>
-
-      <p>
-        Extreme Science • Futuristic Technology • Survival Challenges
-      </p>
-
+      <a href="#home" class="footer-logo">TITANIUM ARMY</a>
+      <p>Extreme Science &middot; Futuristic Technology &middot; Survival Challenges</p>
+      <p class="footer-note">Unofficial fan-made page. All official video content belongs to its respective creator/channel.</p>
       <div class="socials">
-
-        <a href="#"
-           aria-label="YouTube">
-          YouTube
-        </a>
-
-        <a href="#"
-           aria-label="Instagram">
-          Instagram
-        </a>
-
+        <a href="https://www.youtube.com/@MrIndianHacker" target="_blank" rel="noopener noreferrer" aria-label="Open official YouTube channel">YouTube</a>
+        <a href="#experiments" aria-label="Jump to experiment videos">Experiments</a>
       </div>
-
-      <small>
-        © 2026 Titanium Army. All Rights Reserved.
-      </small>
-
+      <small>&copy; 2026 Titanium Army fan page. All Rights Reserved.</small>
     </div>
-
   </footer>
 
-  <!-- ========================= -->
-  <!-- SCRIPTS -->
-  <!-- ========================= -->
-
   <script defer src="script.js"></script>
-
 </body>
-
 </html>
