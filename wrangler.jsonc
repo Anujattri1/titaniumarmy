@@ -1,12 +1,15 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "titaniumarmy",
-  "compatibility_date": "2026-05-24",
+  "main": "src/index.js",
+  "compatibility_date": "2026-06-18",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "titaniumarmy"
+    "directory": "titaniumarmy",
+    "binding": "ASSETS",
+    "run_worker_first": true
   },
   "compatibility_flags": [
     "nodejs_compat"
