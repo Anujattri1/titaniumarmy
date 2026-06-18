@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://titaniumarmy.attrim27.workers.dev/sitemap.xml
