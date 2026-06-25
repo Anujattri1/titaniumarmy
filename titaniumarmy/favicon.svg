@@ -1,5 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Titanium Army">
-  <rect width="64" height="64" rx="14" fill="#05070b"/>
-  <path d="M12 18h40v8H36v22h-8V26H12z" fill="#ff6b00"/>
-  <path d="M20 48l12-32 12 32h-8l-2-6h-4l-2 6z" fill="#7c5cff" opacity="0.9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ti logo">
+  <defs>
+    <radialGradient id="metal" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#f5f6f7"/>
+      <stop offset="45%" stop-color="#cfcfd0"/>
+      <stop offset="70%" stop-color="#9a9c9e"/>
+      <stop offset="100%" stop-color="#3f4042"/>
+    </radialGradient>
+    <filter id="inset-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="1"/>
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feComposite in="b" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+
+  <!-- black rounded square background -->
+  <rect width="64" height="64" rx="12" fill="#000000"/>
+
+  <!-- circular metal plate -->
+  <circle cx="32" cy="32" r="24" fill="url(#metal)" stroke="#0b0b0b" stroke-opacity="0.6" stroke-width="2" filter="url(#inset-shadow)"/>
+
+  <!-- initials (Ti) in black/silver style -->
+  <text x="32" y="38" text-anchor="middle" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="26"
+        fill="#0b0b0b" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" paint-order="stroke">
+    Ti
+  </text>
 </svg>
